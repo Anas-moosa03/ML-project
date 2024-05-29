@@ -1,8 +1,8 @@
-## Machine Learning Project
+# Machine Learning Project
 
 This repository contains a comprehensive Jupyter Notebook focused on a machine learning project. The notebook includes detailed steps and code for data preprocessing, model training, evaluation, and visualization.
 
-# Contents
+## Contents
 
 Data Preprocessing: Cleaning and transforming data for model readiness.
 
@@ -14,14 +14,14 @@ Model Evaluation: Assessing model performance using different metrics.
 
 Visualization: Plotting results to understand model behavior and performance.
 
-# Key Features
+## Key Features
 Markdown Cells: Detailed explanations and documentation.
 
 Code Cells: Executable code for data manipulation, model training, and evaluation.
 
 Visualization: Graphs and charts to visualize data and model results.
 
-# Dependencies
+## Dependencies
 Python 3
 
 Jupyter Notebook
