@@ -1,35 +1,75 @@
-# Machine Learning Project
+# ML Project
+# Mobile Price Classification & Vehicle Accidents Prediction
 
-This repository contains a comprehensive Jupyter Notebook focused on a machine learning project. The notebook includes detailed steps and code for data preprocessing, model training, evaluation, and visualization.
+## Overview
+This project involves two separate analyses:
+1. **Mobile Price Classification**: Predicting mobile phone price categories using machine learning algorithms.
+2. **Vehicle Accidents Time Series Prediction**: Forecasting vehicle accidents based on historical data.
 
-## Contents
+## Datasets
 
-Data Preprocessing: Cleaning and transforming data for model readiness.
+### 1. Mobile Price Classification
+- **Source**: [Kaggle - Mobile Price Classification](https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification)
+- **Features**: Attributes of mobile phones (e.g., battery power, clock speed, etc.).
+- **Target Variable**: `price_range` - Categorical variable representing price categories.
 
-Exploratory Data Analysis (EDA): Visualizing data to identify patterns and insights.
+### 2. Vehicle Accidents Time Series
+- **Source**: [Kaggle - Vehicle Accidents](https://www.kaggle.com/datasets/ddosad/vehicle-accidents)
+- **Features**: Time series data of vehicle accidents.
+- **Target**: Predict future accidents based on historical data.
 
-Model Training: Implementing various machine learning algorithms.
+## Project Structure
 
-Model Evaluation: Assessing model performance using different metrics.
+### Mobile Price Classification
 
-Visualization: Plotting results to understand model behavior and performance.
+#### Data Pre-processing
+- **Splitting Data**: Using `train_test_split` for training and testing sets.
+- **Feature Engineering**: 
+  - Correlation analysis with heatmap visualization.
+  - Feature importance selection using Random Forest.
 
-## Key Features
-Markdown Cells: Detailed explanations and documentation.
+#### Models Applied
+- **Random Forest Classifier**: 
+  - Feature importance visualization.
+  - Hyperparameter tuning with GridSearchCV.
 
-Code Cells: Executable code for data manipulation, model training, and evaluation.
+- **Multi-layer Perceptron (MLP)**:
+  - Extensive hyperparameter tuning via GridSearchCV.
+  - Performance evaluation with accuracy, classification reports, and visualizations.
 
-Visualization: Graphs and charts to visualize data and model results.
+- **Support Vector Machine (SVM)**:
+  - Basic model followed by parameter optimization using Optuna.
 
-## Dependencies
-Python 3
+#### Analysis & Visualization
+- Feature importance and correlation plots.
+- Model performance metrics and visualizations.
 
-Jupyter Notebook
+### Vehicle Accidents Time Series Prediction
 
-Standard machine learning libraries (e.g., pandas, numpy, scikit-learn, matplotlib)
+#### Data Pre-processing
+- **Normalization**: Using `MinMaxScaler` for scaling accident data.
+- **Data Splitting**: Into training and testing sets for time series data.
 
-## Data set links
+#### Models Applied
+- **Echo State Network (ESN)**:
+  - Custom implementation for time series prediction.
 
-[Mobile Classification dataset](https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification?select=train.csv)
+- **LSTM (Long Short-Term Memory)**:
+  - Neural network model for time series forecasting with Keras.
 
-[Time Series Vehicle dataset](https://www.kaggle.com/datasets/ddosad/vehicle-accidents)
+- **Bidirectional LSTM**:
+  - Enhanced LSTM for capturing patterns from both past and future contexts.
+
+#### Analysis & Visualization
+- Error analysis with plots.
+- Residuals and actual vs. predicted value comparisons.
+
+### Usage
+To run the code, ensure you have the following libraries installed:
+- `pandas`, `numpy`, `matplotlib`, `seaborn` for data manipulation and visualization
+- `scikit-learn` for traditional ML algorithms
+- `optuna` for optimization
+- `keras` for neural network models
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn optuna keras
